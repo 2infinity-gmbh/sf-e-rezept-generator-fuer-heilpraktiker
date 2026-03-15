@@ -1,0 +1,125 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  publishDate?: string;
+  author?: string;
+}
+
+const { title, description, publishDate, author = 'E-Rezept Generator Team' } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+
+  <main class="flex-grow">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Ad Space: Header -->
+      <div class="mb-8 bg-gray-100 rounded-lg p-4 text-center text-gray-400 min-h-[90px] flex items-center justify-center">
+        <!-- Ad Placement: Header Banner -->
+      </div>
+
+      <header class="mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{title}</h1>
+        {publishDate && (
+          <div class="flex items-center text-gray-600 text-sm">
+            <time datetime={publishDate}>
+              {new Date(publishDate).toLocaleDateString('de-DE', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+            <span class="mx-2">•</span>
+            <span>{author}</span>
+          </div>
+        )}
+      </header>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2 prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-primary-600 hover:prose-a:text-primary-700 prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700">
+          <slot />
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-4">
+            <!-- Ad Space: Sidebar -->
+            <div class="bg-gray-100 rounded-lg p-4 text-center text-gray-400 min-h-[600px] mb-6 flex items-center justify-center">
+              <!-- Ad Placement: Sidebar -->
+            </div>
+
+            <!-- Quick Links -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Schnellzugriff</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="/" class="text-primary-600 hover:text-primary-700 hover:underline">
+                    Startseite
+                  </a>
+                </li>
+                <li>
+                  <a href="/artikel" class="text-primary-600 hover:text-primary-700 hover:underline">
+                    Alle Artikel
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Ad Space: In-Content Footer -->
+      <div class="mt-12 bg-gray-100 rounded-lg p-4 text-center text-gray-400 min-h-[90px] flex items-center justify-center">
+        <!-- Ad Placement: Article Footer -->
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style is:global>
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+
+  .prose h3 {
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .prose ul, .prose ol {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+  }
+
+  .prose li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    line-height: 1.75;
+  }
+
+  .prose strong {
+    font-weight: 600;
+  }
+</style>

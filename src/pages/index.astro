@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'E-Rezept Generator für Heilpraktiker | Digitale Verordnungen einfach erstellen';
+const description = 'Professioneller E-Rezept Generator für Heilpraktiker. Erstellen Sie rechtssichere digitale Verordnungen schnell und einfach. Moderne Praxisverwaltung für Heilpraktiker.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            E-Rezept Generator für Heilpraktiker
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto">
+            Digitale Verordnungen rechtssicher und professionell erstellen –
+            Ihre moderne Lösung für die Heilpraktiker-Praxis
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/artikel"
+              class="inline-block bg-white text-primary-700 font-semibold px-8 py-3 rounded-lg hover:bg-primary-50 transition-colors shadow-lg"
+            >
+              Mehr erfahren
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Space: Below Hero -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="bg-gray-100 rounded-lg p-4 text-center text-gray-400 min-h-[90px] flex items-center justify-center">
+        <!-- Ad Placement: Below Hero -->
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Warum E-Rezepte für Heilpraktiker?
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Die Digitalisierung im Gesundheitswesen bietet zahlreiche Vorteile für Ihre Praxis
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Rechtssicher</h3>
+            <p class="text-gray-600">
+              Alle gesetzlichen Vorgaben und Dokumentationspflichten werden automatisch eingehalten.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Effizient</h3>
+            <p class="text-gray-600">
+              Sparen Sie Zeit durch digitale Prozesse und reduzieren Sie Ihren Verwaltungsaufwand deutlich.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Datenschutz</h3>
+            <p class="text-gray-600">
+              DSGVO-konforme Verarbeitung aller Patientendaten mit höchsten Sicherheitsstandards.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Dokumentation</h3>
+            <p class="text-gray-600">
+              Automatische und lückenlose Dokumentation aller Verordnungen in der Patientenakte.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Mobil</h3>
+            <p class="text-gray-600">
+              Zugriff von überall – ob in der Praxis, unterwegs oder im Homeoffice.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Professionell</h3>
+            <p class="text-gray-600">
+              Modernes Erscheinungsbild unterstreicht die Professionalität Ihrer Praxis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Articles Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Aktuelle Artikel
+          </h2>
+          <p class="text-xl text-gray-600">
+            Bleiben Sie informiert über E-Rezepte und digitale Verordnungen
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <!-- Article 1 -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                <a href="/artikel/e-rezept-heilpraktiker-leitfaden-2024" class="hover:text-primary-600">
+                  E-Rezept für Heilpraktiker: Der umfassende Leitfaden für 2024
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Das E-Rezept hält Einzug in die deutsche Gesundheitslandschaft. Dieser Leitfaden bietet einen umfassenden Überblick über das E-Rezept für Heilpraktiker im Jahr 2024.
+              </p>
+              <a href="/artikel/e-rezept-heilpraktiker-leitfaden-2024" class="text-primary-600 hover:text-primary-700 font-semibold">
+                Weiterlesen →
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                <a href="/artikel/e-rezept-generator-heilpraktiker-digitale-verordnungen" class="hover:text-primary-600">
+                  E-Rezept Generator für Heilpraktiker: Digitale Verordnungen einfach erstellen
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Ein E-Rezept Generator bietet die perfekte Lösung, um digitale Verordnungen rechtssicher und professionell zu erstellen.
+              </p>
+              <a href="/artikel/e-rezept-generator-heilpraktiker-digitale-verordnungen" class="text-primary-600 hover:text-primary-700 font-semibold">
+                Weiterlesen →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="/artikel"
+            class="inline-block bg-primary-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors"
+          >
+            Alle Artikel ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary-600 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Bereit für die digitale Zukunft?
+        </h2>
+        <p class="text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
+          Erfahren Sie mehr über E-Rezepte und wie Sie Ihre Heilpraktiker-Praxis digitalisieren können.
+        </p>
+        <a
+          href="/artikel"
+          class="inline-block bg-white text-primary-700 font-semibold px-8 py-3 rounded-lg hover:bg-primary-50 transition-colors"
+        >
+          Jetzt informieren
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

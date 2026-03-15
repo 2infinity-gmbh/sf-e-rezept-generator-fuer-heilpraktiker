@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Impressum | E-Rezept Generator für Heilpraktiker';
+const description = 'Impressum und Angaben gemäß § 5 TMG für E-Rezept Generator für Heilpraktiker.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+
+  <main class="flex-grow bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-8">Impressum</h1>
+
+      <div class="bg-white rounded-lg shadow-md p-8 prose prose-lg max-w-none">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          <strong>E-Rezept Generator für Heilpraktiker</strong><br>
+          [Firmenname]<br>
+          [Straße und Hausnummer]<br>
+          [PLZ und Ort]
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Telefon: [Telefonnummer]<br>
+          E-Mail: [E-Mail-Adresse]
+        </p>
+
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>
+          [Name]<br>
+          [Adresse]
+        </p>
+
+        <h2>Haftungsausschluss</h2>
+
+        <h3>Haftung für Inhalte</h3>
+        <p>
+          Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+          Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+        </p>
+
+        <h3>Haftung für Links</h3>
+        <p>
+          Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir
+          keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine
+          Gewähr übernehmen.
+        </p>
+
+        <h3>Urheberrecht</h3>
+        <p>
+          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+          unterliegen dem deutschen Urheberrecht.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

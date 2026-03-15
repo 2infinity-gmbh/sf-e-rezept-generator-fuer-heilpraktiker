@@ -1,0 +1,99 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <!-- Ad Space: Top Banner -->
+  <div class="bg-gray-100 text-center text-gray-400 py-2 text-xs">
+    <!-- Ad Placement: Top Banner -->
+  </div>
+
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center">
+          <span class="text-2xl font-bold text-primary-600">E-Rezept Generator</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-4">
+          <a
+            href="/"
+            class={`px-3 py-2 rounded-md text-sm font-medium ${
+              currentPath === '/'
+                ? 'bg-primary-100 text-primary-700'
+                : 'text-gray-700 hover:bg-gray-100 hover:text-primary-600'
+            }`}
+          >
+            Startseite
+          </a>
+          <a
+            href="/artikel"
+            class={`px-3 py-2 rounded-md text-sm font-medium ${
+              currentPath.startsWith('/artikel')
+                ? 'bg-primary-100 text-primary-700'
+                : 'text-gray-700 hover:bg-gray-100 hover:text-primary-600'
+            }`}
+          >
+            Artikel
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button
+          type="button"
+          class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Hauptmenü öffnen</span>
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu hidden md:hidden pb-3">
+      <div class="space-y-1">
+        <a
+          href="/"
+          class={`block px-3 py-2 rounded-md text-base font-medium ${
+            currentPath === '/'
+              ? 'bg-primary-100 text-primary-700'
+              : 'text-gray-700 hover:bg-gray-100 hover:text-primary-600'
+          }`}
+        >
+          Startseite
+        </a>
+        <a
+          href="/artikel"
+          class={`block px-3 py-2 rounded-md text-base font-medium ${
+            currentPath.startsWith('/artikel')
+              ? 'bg-primary-100 text-primary-700'
+              : 'text-gray-700 hover:bg-gray-100 hover:text-primary-600'
+          }`}
+        >
+          Artikel
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+
+    button?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+  });
+</script>

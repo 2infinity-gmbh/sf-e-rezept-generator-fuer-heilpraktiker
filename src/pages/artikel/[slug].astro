@@ -1,0 +1,18 @@
+---
+export async function getStaticPaths() {
+  const articles = [
+    { slug: 'e-rezept-heilpraktiker-leitfaden-2024' },
+    { slug: 'e-rezept-generator-heilpraktiker-digitale-verordnungen' }
+  ];
+
+  return articles.map(article => ({
+    params: { slug: article.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const article = await import(`../../content/articles/${slug}.md`);
+const { Content } = article;
+---
+
+<Content />

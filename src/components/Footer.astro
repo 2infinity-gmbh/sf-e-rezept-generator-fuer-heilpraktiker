@@ -1,0 +1,55 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white mt-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">E-Rezept Generator für Heilpraktiker</h3>
+        <p class="text-gray-400 text-sm">
+          Ihre professionelle Lösung für digitale Verordnungen und E-Rezepte in der Heilpraktiker-Praxis.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Schnellzugriff</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="/" class="text-gray-400 hover:text-white transition-colors">
+              Startseite
+            </a>
+          </li>
+          <li>
+            <a href="/artikel" class="text-gray-400 hover:text-white transition-colors">
+              Artikel
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Rechtliches</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="/impressum" class="text-gray-400 hover:text-white transition-colors">
+              Impressum
+            </a>
+          </li>
+          <li>
+            <a href="/datenschutz" class="text-gray-400 hover:text-white transition-colors">
+              Datenschutz
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+      <p>&copy; {currentYear} E-Rezept Generator für Heilpraktiker. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
+</footer>
